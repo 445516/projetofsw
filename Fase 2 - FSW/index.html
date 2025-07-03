@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Mercado</title>
+
+  <!-- Bootstrap -->
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-
+alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-
+aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" 
+crossorigin="anonymous"> 
+  
+  <!-- CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    header, footer {
+      background-color: #2e8b57;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .categoria, .servico {
+      margin-bottom: 40px;
+    }
+
+    .item {
+      display: inline-block;
+      width: 220px;
+      margin: 20px;
+      text-align: center;
+      vertical-align: top;
+      background-color: #ffffff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .item:hover {
+      transform: scale(1.05);
+    }
+
+    .item img {
+      width: 180px;
+      height: auto;
+      border-radius: 10px;
+      display: block;
+      margin: 0 auto 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .item img:hover {
+      transform: scale(1.1);
+    }
+
+    .item h4 {
+      margin: 10px 0 5px;
+      font-size: 1.1em;
+    }
+
+    .item p {
+      margin: 5px 0;
+      font-size: 0.95em;
+    }
+
+footer nav a {
+  color: #e0ffe0;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+footer nav a:hover {
+  text-decoration: underline;
+}
+    .carousel-caption {
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    .carousel-item img {
+      height: 400px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header>
+    <h1>Minimercado</h1>
+    <nav>
+      <a href="#frutas">Frutas e Verduras</a>
+      <a href="#nao-pereciveis">Alimentos Não Perecíveis</a>
+      <a href="#higiene">Higiene e Limpeza</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#cadastro">Cadastro</a>
+    </nav>
+  </header>
+
+  <!-- CARROSSEL -->
+  <div class="container mt-5">
+    <div id="meuCarrossel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://www.hortifrutidiretodocampo.com.br/wp-content/uploads/2021/08/hortifruti-direto-do-campo-ainda-mais-conectado-a-voce.jpg" class="d-block w-100" alt="Hortifruti">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Hortifruti</h5>
+            <p>Aproveite nossas ofertas no hortifruti!</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://media.istockphoto.com/id/1227210244/pt/foto/flat-lay-view-at-kitchen-table-full-with-non-perishable-foods-spase-for-text.jpg?s=612x612&w=0&k=20&c=x02pCtgkI3qtKzWXQse-auBtrDvQi6foRVBAWyv11X0=" class="d-block w-100" alt="Alimentos não perecíveis">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Não Perecíveis</h5>
+            <p>Ofertas incríveis no setor de alimentos!</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://www.slowbeauty.com.br/wp-content/uploads/2024/10/top-view-bath-products-concept-1024x683.jpg.webp" class="d-block w-100" alt="Higiene e limpeza">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Higiene e Limpeza</h5>
+            <p>Produtos essenciais para seu dia a dia.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controles -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#meuCarrossel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#meuCarrossel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Próximo</span>
+      </button>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    </div>
+  </div>
+
+<!-- FORMULÁRIO DE CADASTRO -->
+   <a href="formulario.html" id="cadastro" class="item" style="text-decoration: none; color: inherit;">
+        <div>
+            <img src="https://catracalivre.com.br/wp-content/uploads/sites/8/2015/11/supermercado-1-iStock.jpg" alt="Imagem de um carrinho de mercado">
+            <h4>Cadastro</h4>
+            <p>Faça o seu cadastro online para comprar e receber nossos produtos.</p>
+        </div>
+    </a>
+
+
+   <!-- CATEGORIAS -->
+    <div class="container">
+        <section id="frutas" class="categoria">
+   
+            <!-- FRUTAS E VERDURAS -->
+            <h2>Frutas e Verduras</h2>
+            <div class="item">
+                <img src="https://i.pinimg.com/736x/72/ee/07/72ee0780f7d313ebac05300984ecd1a1.jpg" alt="Maçã fuji">
+
+                <h4>Maçã fuji</h4>
+                <p>Pacote contendo 12 unidades de maçã fuji.<p>
+                <p><strong>R$ 12,99/unid.</strong></p>
+            </div>
+           
+            <div class="item">
+                <img src="https://i.pinimg.com/564x/8f/c8/78/8fc8782ce11aaf088065593ad1c47f75.jpg" alt="Alface crespa">
+                <h4>Alface crespa</h4>
+                <p>Pacote contendo 1 pé de alface crespa.</p>
+                <p><strong>R$ 5,97/unid.</strong></p>
+            </div>
+        </section>
+
+      <!--ALIMENTOS NÃO PERECÍVEIS -->
+        <section id="nao-pereciveis" class="categoria">
+            <h2>Alimentos Não Perecíveis</h2>
+            <div class="item">
+                <img src="https://i.pinimg.com/736x/70/95/bd/7095bdf30145006095608f63c9c756b5.jpg" alt="Arroz branco tipo 1">
+                <h4>Arroz branco tipo 1</h4>
+                <p>Pacote contendo 5kg de arroz branco - tipo 1.</p>
+                <p><strong>R$ 23,99/unid.</strong></p>
+            </div>
+           
+            <div class="item">
+                <img src="https://static.vecteezy.com/ti/fotos-gratis/t2/8444518-espaguete-cru-seco-para-boliche-foto.jpg" alt="Macarrão espaguete">
+                <h4>Macarrão espaguete</h4>
+                <p>Macarrão espaguete - pacote de 500g.</p>
+                <p><strong>R$ 3,50/unid.</strong></p>
+            </div>
+        </section>
+
+        <!-- HIGIENE E LIMPEZA -->
+        <section id="higiene" class="categoria">
+            <h2>Higiene e Limpeza</h2>
+            <div class="item">
+                <img src="https://portalrbv.com.br/wp-content/uploads/2025/05/6-beneficios-do-sabao-de-coco-em-barra.webp" alt="Sabão em barra de coco">
+                <h4>Sabão em barra de coco</h4>
+                <p>Sabão em barra de coco - 900g.</p>
+                <p><strong>R$ 2,30/unid.</strong></p>
+            </div>
+           
+            <div class="item">
+                <img src="https://static.vecteezy.com/ti/fotos-gratis/t2/37978195-dois-seco-rosa-sabonete-bares-dentro-pilha-isolado-em-branco-fundo-com-recorte-caminho-foto.jpg" alt="Sabonete em barra de cereja">
+                <h4>Sabonete em barra</h4>
+                <p>Sabonete hidratante em barra de cereja - 90g.</p>
+                <p><strong>R$ 1,80/unid.</strong></p>
+            </div>
+        </section>
+
+     <!-- SERVIÇOS -->
+<section id="servicos" class="servico">
+    <h2>Serviços Oferecidos</h2>
+
+    <!-- RETIRADA NO LOCAL -->
+    <a href="serviço.html" class="item" style="text-decoration: none; color: inherit;">
+        <div>
+            <img src="https://img.freepik.com/vetores-premium/frente-de-loja-em-estilo-de-arte-de-linha-plana_1375-11514.jpg" alt="Retirada no local">
+            <h4>Retirada no Local</h4>
+            <p>Compre online e retire na loja.</p>
+            <p><strong>Gratuito</strong></p>
+        </div>
+    </a>
+
+    <!-- TELE-ENTREGA -->
+    <a href="serviço.html" class="item" style="text-decoration: none; color: inherit;">
+        <div>
+            <img src="https://img.freepik.com/vetores-premium/um-entregador-de-motocicleta-em-um-fundo-branco-com-espaco-de-copia_625455-2101.jpg" alt="Tele-entrega">
+            <h4>Tele-entrega</h4>
+            <p>Entrega na sua casa.</p>
+            <p><strong>Calcular</strong></p>
+        </div>
+
+  <!-- RODAPÉ -->
+  <footer class="mt-5">
+    <h4>Minimercado</h4>
+    <p>&copy; 2025 Minimercado. Todos os direitos reservados.</p>
+    <p>Contato: (11) 11111-1111</p>
+    <nav>
+      <a href="#frutas">Frutas e Verduras</a> |
+      <a href="#nao-pereciveis">Alimentos Não Perecíveis</a> |
+      <a href="#higiene">Higiene e Limpeza</a> |
+      <a href="#servicos">Serviços</a> |
+      <a href="#cadastro">Cadastro</a>
+    </nav>
+  </footer>
+</body>
+</html>
